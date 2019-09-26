@@ -44,6 +44,7 @@ class DropDownFormField extends FormField<dynamic> {
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton<dynamic>(
                         isExpanded: true,
+                        isDense:false,
                         hint: Text(
                           hintText,
                           style: TextStyle(color: Colors.grey.shade500),
@@ -56,7 +57,7 @@ class DropDownFormField extends FormField<dynamic> {
                         items: dataSource.map((item) {
                           return DropdownMenuItem<dynamic>(
                             value: item[valueField],
-                            child: Text(item[textField]),
+                            child: Text(item[textField], style: TextStyle(fontSize: 13),),
                           );
                         }).toList(),
                       ),
